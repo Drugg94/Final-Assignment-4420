@@ -1,12 +1,15 @@
 from tkinter import *
+from tkinter import messagebox
 
 root = Tk()
 
 database = []
 
 def showBooks():
+    librarySelection = ''
     for i in database:
-        print(i['Title'])
+        librarySelection = librarySelection + i['Title'] + ': ' + str(i['# Not checked out']) + '\n'
+    messagebox.showinfo("Title: # Available", librarySelection)
 
     
 
